@@ -18,7 +18,7 @@ mean_node = node(func=mean, inputs=["xs", "n"], outputs="mean", name="mean")
 
 variance_pipeline = pipeline(
         node(func=len, inputs=["xs"], outputs="n"),
-        node(func=mean, ,inputs=["xs", "n"], outputs="mean")
+        node(func=mean, inputs=["xs", "n"], outputs="mean"),
         node(func=squares, inputs="xs", outputs="squares"),
         node(func=mean, inputs=["squares", "n"], outputs="mean_squares"),
         node(func=variance, inputs=["mean_squares", "mean"], output="variance")
